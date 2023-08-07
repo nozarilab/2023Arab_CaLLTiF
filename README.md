@@ -1,4 +1,4 @@
-# CaLLTiF: Causal Discovery from Whole Brain fMRI Data
+# CaLLTiF: Causal discovery for Large-scale Low-resolution Time-series with Feedback
 
 ## Introduction
 
