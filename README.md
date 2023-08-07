@@ -1,4 +1,4 @@
-# CaLLTiF: Causal Discovery in fMRI Data
+# CaLLTiF: Causal Discovery from Whole Brain fMRI Data
 
 ## Introduction
 
