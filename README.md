@@ -1,4 +1,4 @@
-# CaLLTiF: Causal discovery for Large-scale Low-resolution Time-series with Feedback
+# CaLLTiF: Causal Discovery from Whole Brain fMRI Data
 
 ## Introduction
 
@@ -24,17 +24,17 @@ Before running the codes in this repository, ensure that the following Python pa
 - sklearn
 - netplotbrain
 - mpl_toolkits.axes_grid1
+- causalnex
 
 Additionally, the following external packages are required:
 
 - Tigramite package, available at https://github.com/jakobrunge/tigramite
 - Causal discovery package, available at https://github.com/ckassaad/causal_discovery_for_time_series
 - DGLearn method, available at https://github.com/syanga/dglearn
-- DYNOTEARS method, available at https://github.com/quantumblacklabs/causalnex/blob/develop/causalnex/structure/dynotears.py
 - NTS-NOTEARS method available at https://github.com/xiangyu-sun-789/NTS-NOTEARS
 - Causal Command, available at https://www.ccd.pitt.edu/tools/
 
-Additionally, the following files need to be downloaded and made available to the Python codes (either placed in the same directory or specify the path in the code):
+Additionally, the following files need to be downloaded and made available to the Python codes (external packages and files should be placed in the "External Packages and Files" directory):
 
 - The parcel specifications for the Schaefer 100x7 parcellation, available at https://github.com/ThomasYeoLab/CBIG/blob/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_7Networks_order.txt
 - Color codes for the 7 resting-state networks, available at https://github.com/jimmyshen007/NeMo/blob/master/resource/Atlasing/Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_ColorLUT.txt
@@ -44,9 +44,9 @@ Additionally, the following files need to be downloaded and made available to th
 
 ## Data Availability
 
-The Python codes in the "HCP_Causality" directory assume that preprocessed HCP S1200 rsfMRI time series are available in an 'HCP' subdirectory. The data is not included in this distribution but is publicly available at https://db.humanconnectome.org. The preprocessing pipeline is described in the Methods section of the referenced paper.
+The Python codes in the "HCP_Causality" directory assume that preprocessed HCP S1200 rsfMRI time series are available in an 'Data/HCP' subdirectory. The data is not included in this distribution but is publicly available at https://db.humanconnectome.org. The preprocessing pipeline is described in the Methods section of the referenced paper.
 
-Similarly, the Python codes in the "Simulated_fMRI_Causality" directory assume that simulated fMRI time series are available. These are not included in this distribution but are publicly available at https://github.com/cabal-cmu/Feedback-Discovery.
+Similarly, the Python codes in the "Simulated_fMRI_Causality" directory assume that simulated fMRI time series are available at "Data" directory. These are not included in this distribution but are publicly available at https://github.com/cabal-cmu/Feedback-Discovery.
 
 ## Contact Information
 
