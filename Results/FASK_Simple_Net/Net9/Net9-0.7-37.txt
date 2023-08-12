@@ -1,0 +1,92 @@
+================================================================================
+FASK (Wed, July 27, 2022 05:00:08 PM)
+================================================================================
+
+Runtime Parameters
+--------------------------------------------------------------------------------
+number of threads: 63
+
+Dataset
+--------------------------------------------------------------------------------
+file: concat_BOLDfslfilter_37.txt
+header: yes
+delimiter: tab
+quote char: none
+missing marker: none
+comment marker: none
+
+Algorithm Run
+--------------------------------------------------------------------------------
+algorithm: FASK
+test of independence: CCI-Test (Conditional Correlation Independence Test)
+
+Algorithm Parameters
+--------------------------------------------------------------------------------
+addOriginalDataset: no
+alpha: 0.7
+basisType: 2
+depth: -1
+faskAdjacencyMethod: 1
+faskDelta: 0.0
+faskLeftRightRule: 2
+faskNonempirical: no
+kernelMultiplier: 1.0
+kernelRegressionSampleSize: 100
+kernelType: 2
+numBasisFunctions: 30
+numberResampling: 0
+orientationAlpha: 0.0
+percentResampleSize: 90
+resamplingEnsemble: 0
+resamplingWithReplacement: no
+skewEdgeThreshold: 0.3
+twoCycleScreeningThreshold: 0.0
+verbose: no
+
+
+Wed, July 27, 2022 05:00:08 PM: Start data validation on file concat_BOLDfslfilter_37.txt.
+Wed, July 27, 2022 05:00:08 PM: End data validation on file concat_BOLDfslfilter_37.txt.
+There are 5000 cases and 9 variables.
+
+Wed, July 27, 2022 05:00:08 PM: Start reading in file concat_BOLDfslfilter_37.txt.
+Wed, July 27, 2022 05:00:08 PM: Finished reading in file concat_BOLDfslfilter_37.txt.
+Wed, July 27, 2022 05:00:08 PM: File concat_BOLDfslfilter_37.txt contains 5000 cases, 9 variables.
+
+Start search: Wed, July 27, 2022 05:00:08 PM
+End search: Wed, July 27, 2022 05:18:16 PM
+
+================================================================================
+Graph Nodes:
+X1;X2;X3;X4;X5;X6;X7;X8;X9
+
+Graph Edges:
+1. X1 --> X3
+2. X1 --> X5
+3. X1 --> X8
+4. X2 --> X1
+5. X2 --> X5
+6. X2 --> X6
+7. X3 --> X2
+8. X3 --> X5
+9. X3 --> X7
+10. X3 --> X8
+11. X3 --> X9
+12. X4 --> X1
+13. X4 --> X2
+14. X4 --> X3
+15. X4 --> X6
+16. X4 --> X8
+17. X5 --> X4
+18. X5 --> X7
+19. X6 --> X3
+20. X6 --> X5
+21. X7 --> X4
+22. X7 --> X6
+23. X7 --> X8
+24. X7 --> X9
+25. X8 --> X5
+26. X8 --> X6
+27. X8 --> X9
+28. X9 --> X2
+29. X9 --> X4
+30. X9 --> X6
