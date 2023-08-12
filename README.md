@@ -31,7 +31,7 @@ Additionally, the following external packages are required:
 - Tigramite package, available at https://github.com/jakobrunge/tigramite
 - Causal discovery package, available at https://github.com/ckassaad/causal_discovery_for_time_series
 - DGLearn method, available at https://github.com/syanga/dglearn
-- NTS-NOTEARS method available at https://github.com/xiangyu-sun-789/NTS-NOTEARS
+- NTS-NOTEARS method, available at https://github.com/xiangyu-sun-789/NTS-NOTEARS
 - Causal Command, available at https://www.ccd.pitt.edu/tools/
 
 Additionally, the following files need to be downloaded and made available to the Python codes (external packages and files should be placed in the "External Packages and Files" directory):
@@ -44,9 +44,9 @@ Additionally, the following files need to be downloaded and made available to th
 
 ## Data Availability
 
-The Python codes in the "HCP_Causality" directory assume that preprocessed HCP S1200 rsfMRI time series are available in an 'Data/HCP' subdirectory. The data is not included in this distribution but is publicly available at https://db.humanconnectome.org. The preprocessing pipeline is described in the Methods section of the referenced paper.
+The Python codes in the "HCP Causality" directory assume that preprocessed HCP S1200 rsfMRI time series are available in the 'Data/HCP' subdirectory. The data is not included in this distribution but is publicly available at https://db.humanconnectome.org. The preprocessing pipeline is described in the Methods section of the referenced paper.
 
-Similarly, the Python codes in the "Simulated_fMRI_Causality" directory assume that simulated fMRI time series are available at "Data" directory. These are not included in this distribution but are publicly available at https://github.com/cabal-cmu/Feedback-Discovery.
+Similarly, the Python codes in the "Simulated fMRI Causality" directory assume that simulated fMRI time series are available in the "Data" directory. These are not included in this distribution but are publicly available at https://github.com/cabal-cmu/Feedback-Discovery.
 
 ## Contact Information
 
