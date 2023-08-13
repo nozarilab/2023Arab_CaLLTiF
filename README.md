@@ -48,6 +48,10 @@ The Python codes in the "HCP Causality" directory assume that preprocessed HCP S
 
 Similarly, the Python codes in the "Simulated fMRI Causality" directory assume that simulated fMRI time series are available in the "Data" directory. These are not included in this distribution but are publicly available at https://github.com/cabal-cmu/Feedback-Discovery.
 
+## Note
+
+The provided code samples have been tested and executed on an Ubuntu 22.04.2 LTS system. If you intend to run the FASK method using the causal command Java software through a system command in Python code, please be aware that some modifications may be necessary to ensure compatibility with your system.
+
 ## Contact Information
 
 For any questions or issues related to this repository, please contact Fahimeh Arab at farab002@ucr.edu.
