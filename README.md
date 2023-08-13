@@ -2,29 +2,29 @@
 
 ## Introduction
 
-This repository contains Python codes used for data processing and simulations in the article titled "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2023). The repository includes two sets of experiments: one using simulated fMRI data and another using real resting-state fMRI data from the Human Connectome Project (HCP) dataset. Additionally, this package introduces the new proposed causal discovery method called CaLLTiF, designed based on the PCMCI causal discovery method and is suitable for whole-brain causal discovery.
+This repository contains Python codes used for data processing and simulations in the article titled "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2023). The repository includes two sets of experiments: one using simulated fMRI data and another using real resting-state fMRI data from the Human Connectome Project (HCP) dataset. Additionally, this package introduces the newly proposed causal discovery method called CaLLTiF, designed based on the PCMCI causal discovery method, which is suitable for whole-brain causal discovery.
 
 ## Reference
 
- The referenced paper for this work is "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2023). You can find the paper on bioRxiv.
+The referenced paper for this work is "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2023). You can find the paper on bioRxiv at https://doi.org/10.1101/2023.08.12.553067.
 
 ## External Packages and Files
 
 Before running the codes in this repository, ensure that the following Python packages are installed:
 
-- numpy
-- scipy
-- matplotlib
-- pandas
-- networkx
-- nibabel
-- seaborn
-- importlib
-- nilearn
-- sklearn
-- netplotbrain
+- NumPy
+- SciPy
+- Matplotlib
+- Pandas
+- NetworkX
+- NiBabel
+- Seaborn
+- Importlib
+- Nilearn
+- scikit-learn
+- NetPlotBrain
 - mpl_toolkits.axes_grid1
-- causalnex
+- CausalNex
 
 Additionally, the following external packages are required:
 
