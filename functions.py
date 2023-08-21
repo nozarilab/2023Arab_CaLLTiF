@@ -4,6 +4,18 @@ import datetime
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
+def compute_cohens_d(x,y):
+
+    n1 = x.shape[0]
+    n2 = y.shape[0]
+
+    s1 = np.std(x, ddof = 1)
+    s2 = np.std(y, ddof = 1)
+    s = np.sqrt(((n1-1)*s1**2 + (n2-1)*s2**2)/(n1+n2-2))
+    cohens_d = (np.mean(x)-np.mean(y))/s
+    return cohens_d
+
 # functions needed for causal discovery analysis
 
 # This function plot a directional graph from a binary matrix
@@ -341,6 +353,42 @@ def summarize_across_all_lags_v2(time_lag_graph):
                 orientation_binary_matrix[i,j] = 0
     
     return summary_graph, adjacency_binary_matrix, orientation_binary_matrix
+
+def summarize_across_all_lags_v2_with_pvalues(time_lag_graph, p_matrix):
+
+    num_vars = time_lag_graph.shape[0]
+    num_lags = time_lag_graph.shape[2]
+
+    summary_graph = [['' for t in range(0, num_vars)] for i in range(0, num_vars)]
+
+    binary_matrix = np.zeros((num_vars, num_vars))
+    binary_graph_p_matrix = np.zeros((num_vars, num_vars))
+
+    for i in range(0,num_vars):
+        for j in range(0,num_vars):
+
+            edges_all_lags  = time_lag_graph[i,j,:]
+
+            if '-->' in edges_all_lags:
+                summary_graph[i][j] = '-->'
+                binary_matrix[i,j] = 1
+
+                which_lags = np.where(edges_all_lags =='-->')[0]
+                binary_graph_p_matrix[i,j] = np.min(p_matrix[i,j,which_lags])
+
+            elif ('-->' not in edges_all_lags and 'o-o' in edges_all_lags):
+                summary_graph[i][j] = 'o-o'
+                binary_matrix[i,j] = 1
+
+                binary_graph_p_matrix[i,j]= p_matrix[i,j,0]
+
+            else:
+                summary_graph[i][j] = ''
+                binary_matrix[i,j] = 0
+                binary_graph_p_matrix[i,j] = np.min(p_matrix[i,j,:])
+    
+    return summary_graph, binary_matrix, binary_graph_p_matrix
+
 
 # The following function computes TPR,FPR, Recall, Precision, and F1 score for an estimated graph
 def find_tpr_fpr_from_binary_matrix(true_graph_matrix, estimated_graph_matrix):
