@@ -110,6 +110,51 @@ def network_map(graph,net_labels,network_dic,parcel_labels, num_cortical_parcels
                 all_network_normalized_num_edges_from_to[i,j] = num_edges_from_to/(len(from_net_parcel_idx)*len(to_net_parcel_idx))
             
     return all_network_normalized_num_edges_from_to
+
+
+def network_map_v2(graph,net_labels,network_dic,parcel_labels, num_cortical_parcels):
+
+
+    num_networks = len(net_labels)
+    num_parcels = len(parcel_labels)
+
+    network_parcel_idx= eval(network_dic)
+
+    for i in range (0 , num_parcels):
+
+        if i < num_cortical_parcels:
+            temp = parcel_labels[i]
+            temp_first = temp[3:6]
+            if temp_first in network_parcel_idx:
+                network_parcel_idx[temp_first].append(i)
+
+            if i>=100:
+                network_parcel_idx['Sub'].append(i)  
+                
+
+    all_network_normalized_num_edges_from_to = np.zeros((num_networks,num_networks))
+
+    for i in range(0, num_networks):
+        for j in range(0,num_networks):
+
+            from_net = net_labels[i]
+            to_net = net_labels[j]
+
+            from_net_parcel_idx =  np.array(network_parcel_idx[from_net])
+            to_net_parcel_idx =  np.array(network_parcel_idx[to_net])
+
+            if len(to_net_parcel_idx) != 0 and len(from_net_parcel_idx) != 0:
+
+                temp = graph[:,to_net_parcel_idx]
+                temp2 = temp[from_net_parcel_idx,:]
+
+                if from_net == to_net:
+                    np.fill_diagonal(temp2, 0)
+
+                num_edges_from_to = np.sum(temp2)
+                all_network_normalized_num_edges_from_to[i,j] = num_edges_from_to/(len(from_net_parcel_idx)*len(to_net_parcel_idx))
+            
+    return all_network_normalized_num_edges_from_to
         
 
 def convert_to_string_graph(graph_bool):
