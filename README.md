@@ -6,7 +6,7 @@ This repository contains Python codes used for data processing and simulations i
 
 ## Reference
 
-The referenced paper for this work is "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2023). You can find the paper on bioRxiv at https://doi.org/10.1101/2023.08.12.553067.
+The referenced paper for this work is "Whole-Brain Causal Discovery Using fMRI" by Arab, F., Ghassami, A., Jamalabadi, H., Peters, M. A. K., & Nozari, E. (2024). You can find the paper on bioRxiv at https://www.biorxiv.org/content/10.1101/2023.08.12.553067v3.
 
 ## External Packages and Files
 
